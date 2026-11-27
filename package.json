@@ -1,21 +1,19 @@
 {
   "name": "ai-personal-fitness-trainer",
-  "version": "1.0.0",
-  "description": "FitCoach AI - AI-Powered Personal Fitness Trainer Application",
+  "version": "2.0.0",
+  "description": "FitCoach AI - AI-Powered Personal Fitness Trainer Application (FastAPI + React)",
   "scripts": {
-    "install:all": "npm install --prefix server && npm install --prefix client",
     "build": "npm run build --prefix client",
     "dev": "npm run dev --prefix client",
     "start": "uvicorn api.index:app --host 0.0.0.0 --port 5000",
-    "start:fastapi": "uvicorn api.index:app --host 0.0.0.0 --port 5000 --reload",
-    "start:node": "node server/index.js",
-    "test:fastapi": "python test_fastapi.py",
-    "test:api": "node server/test_integration.js"
+    "dev:backend": "uvicorn api.index:app --host 0.0.0.0 --port 5000 --reload",
+    "test": "python test_fastapi.py"
   },
   "keywords": [
     "fitness",
     "ai",
-    "trainer",
+    "fastapi",
+    "react",
     "workout-planner",
     "health",
     "nutrition"

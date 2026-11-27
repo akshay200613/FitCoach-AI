@@ -11,13 +11,8 @@ def get_db_path() -> str:
     if explicit_path:
         return explicit_path
         
-    # Check if existing server/fitness.db exists
-    server_db = Path(__file__).resolve().parent.parent / "server" / "fitness.db"
-    if server_db.parent.exists():
-        return str(server_db)
-        
-    local_db = Path(__file__).resolve().parent / "fitness.db"
-    return str(local_db)
+    root_db = Path(__file__).resolve().parent.parent / "fitness.db"
+    return str(root_db)
 
 DB_PATH = get_db_path()
 

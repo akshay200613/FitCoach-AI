@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-load_dotenv(Path(__file__).resolve().parent.parent / "server" / ".env")
 
 from fastapi import FastAPI, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
