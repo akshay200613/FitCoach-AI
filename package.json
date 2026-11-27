@@ -1,23 +1,29 @@
 {
-  "name": "ai-personal-fitness-trainer",
+  "name": "fitcoach-ai",
+  "private": true,
   "version": "2.0.0",
-  "description": "FitCoach AI - AI-Powered Personal Fitness Trainer Application (FastAPI + React)",
+  "type": "module",
   "scripts": {
-    "build": "node build.js",
-    "dev": "npm run dev --prefix client",
-    "start": "uvicorn api.index:app --host 0.0.0.0 --port 5000",
-    "dev:backend": "uvicorn api.index:app --host 0.0.0.0 --port 5000 --reload",
-    "test": "python test_fastapi.py"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start:backend": "uvicorn api.index:app --host 0.0.0.0 --port 5000 --reload"
   },
-  "keywords": [
-    "fitness",
-    "ai",
-    "fastapi",
-    "react",
-    "workout-planner",
-    "health",
-    "nutrition"
-  ],
-  "author": "FitCoach AI Team",
-  "license": "MIT"
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "framer-motion": "^14.14.0",
+    "lucide-react": "^1.81.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.7",
+    "recharts": "^3.11.1",
+    "tailwindcss": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "oxlint": "^1.94.0",
+    "vite": "^8.4.0"
+  }
 }
